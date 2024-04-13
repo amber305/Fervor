@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Ingrid Darling' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Demo</title>
+    <link rel="icon" href="face-scan.png">
+    <style>
+        /* CSS for styling transparent buttons */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2B4141; /* Set pink background color */
+        }
+
+        .container {
+            display: flex; /* Use flexbox to align webcam and buttons side by side */
+            align-items: center; /* Center items vertically */
+            width: 80%; /* Set container width */
+            margin: 0 auto; /* Center container horizontally */
+            padding: 20px; /* Add padding for better spacing */
+            border-radius: 10px; /* Set rounded corners for the container */
+    
+            
+        }
+
+        .webcam-container {
+            flex: 1; /* Make the webcam container grow to fill available space */
+            border-radius: 10px; /* Set rounded corners for the webcam container */
+
+            background-color: #C8C2AE;
+            border-left: 30px;
+            border-right:30px;
+            border-top:30px;
+            border-bottom:30px;
+            padding:0%;
+        }
+
+        .webcam {
+            width: 100%; /* Set width for the webcam */
+            border-radius: 10px; /* Set rounded corners for the webcam */
+            color
+        }
+
+        .buttons-container {
+            flex: 0; /* Prevent the buttons from growing */
+            text-align: right; /* Align buttons to the right */
+            margin-left: 60px; /* Add margin between webcam and buttons */
+            margin-bottom:30px;
+            background-color:white;
+            font-family: 'Ingrid Darling';font-size: 35px;
+            border-spacing: 30px;
+            padding:0 10px;
+            }
+
+        .transparent-btn {
+            background-color: white; /* Set button background color */
+            border: none; /* Remove button border */
+            color: #000; /* Text color */
+            padding: 5px 10px; /* Add padding to make the button clickable */
+            margin-left: 10px; /* Add margin to separate buttons */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            transition: background-color 0.3s, color 0.3s; /* Add transition for smoother hover effect */
+            font-size: 1.5rem; /* Set smaller font size */
+            margin-bottom: 10px;
+            margin-left:50px;
+            margin-right: 50px;
+            font-family: Kanit;
+            
+        }
+
+        .transparent-btn:hover {
+            background-color: burlywood; /* Change background color on hover */
+            color: #000; /* Change text color on hover */
+        }
+        .heading{
+            font-family:Inter;
+            font-size:60px;
+            color:whitesmoke;
+            text-align: center;
+        }
+        .controlbutton{
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">Product Demo</h1></body>
+<div class="container">
+    <div class="webcam-container">
+        <video class="webcam" id="video" width="500" height="500" autoplay muted></video>
+    </div>
+    <div class="buttons-container">
+        <center><u><h2 class="controlbutton">Controls</h2></u></center>
+        <button class="transparent-btn" id="toggleWebcamBtn">Webcam Off/On</button><br>
+        <button class="transparent-btn">HomePage</button>
+        <button class="transparent-btn">How to Use?</button><br><br>
+    </div>
+</div>
+<script defer src="face-api.min.js"></script>
+<script defer src="script.js"></script>
+</body>
+</html>
